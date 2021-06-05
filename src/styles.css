@@ -1,0 +1,72 @@
+body {
+    background-color: "#e4e4e4";
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #444;
+  }
+  input {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 48px;
+    border: none;
+    text-align: center;
+    font-family: sans-serif;
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cookieBtn {
+    font-size: 24px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(Cookie.png);
+    border: none;
+    transition: transform 0.1s;
+  }
+  .cookieBtn:active {
+    transform: scale(0.95);
+  }
+  .cookieBtn:focus {
+    outline: none;
+  }
+  
+  .UpgradeList {
+    background: white;
+    border: 1px solid #999;
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+  }
+  
+  .UpgradeList ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .Upgrade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .buyBtn {
+    background: white;
+    border: 1px solid #999;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 10px;
+  }
+  
