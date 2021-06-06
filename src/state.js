@@ -6,31 +6,19 @@ const getInitialUpgrades = () => ({
     id: 1,
     cps: 1,
     cost: 10,
-    name: "auto-clicker"
+    name: "Auto-clicker"
   },
   2: {
     id: 2,
     cps: 5,
     cost: 50,
-    name: "grandma"
+    name: "X5"
   },
   3: {
     id: 3,
     cps: 25,
     cost: 100,
-    name: "shipment"
-  },
-  4: {
-    id: 4,
-    cps: 100,
-    cost: 1000,
-    name: "truckload"
-  },
-  5: {
-    id: 5,
-    cps: 500,
-    cost: 10000,
-    name: "factory"
+    name: "X25"
   }
 });
 

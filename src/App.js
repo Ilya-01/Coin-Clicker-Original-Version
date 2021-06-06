@@ -18,7 +18,7 @@ function AutoClicker({ upgrade }) {
 
   useEffect(() => {
     timeout.start();
-  }, []);
+  }, [timeout]);
 
   return null;
 }
@@ -30,7 +30,7 @@ function UpgradeList() {
 
   return (
     <div className="UpgradeList">
-      <h3>Upgrades</h3>
+      <h3 className="UpgradesHeader">Upgrades</h3>
       <ul>
         {Object.keys(upgrades)
           .map(key => upgrades[key])
