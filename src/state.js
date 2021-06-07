@@ -22,7 +22,7 @@ const getInitialUpgrades = () => ({
   }
 });
 
-export const [useCookieStore, store] = create((set, get) => ({
+export const [useCoinStore, store] = create((set, get) => ({
   score: getInitialScore(),
   upgrades: getInitialUpgrades(),
   purchasedUpgrades: [],

@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { useCookieStore } from "./state";
+import { useCoinStore } from "./state";
 import { useInterval } from "react-use-timeout";
 
 import "./styles.css";
 
 function AutoClicker({ upgrade }) {
-  const actions = useCookieStore(s => s.actions);
+  const actions = useCoinStore(s => s.actions);
   const greaterThan1000cps = upgrade.cps > 1000;
   const delay = Math.max(1000 / upgrade.cps, 1);
   const incAmount = greaterThan1000cps ? upgrade.cps / 1000 : 1;
@@ -24,9 +24,9 @@ function AutoClicker({ upgrade }) {
 }
 
 function UpgradeList() {
-  const score = useCookieStore(s => s.score);
-  const upgrades = useCookieStore(s => s.upgrades);
-  const actions = useCookieStore(s => s.actions);
+  const score = useCoinStore(s => s.score);
+  const upgrades = useCoinStore(s => s.upgrades);
+  const actions = useCoinStore(s => s.actions);
 
   return (
     <div className="UpgradeList">
@@ -53,18 +53,18 @@ function UpgradeList() {
   );
 }
 function Score() {
-  const score = useCookieStore(s => s.score);
+  const score = useCoinStore(s => s.score);
   return <input value={score} />;
 }
-function BigCookieButton() {
-  const actions = useCookieStore(s => s.actions);
+function BigCoinButton() {
+  const actions = useCoinStore(s => s.actions);
   return (
-    <button className="cookieBtn" onClick={() => actions.changeScore(1)} />
+    <button className="coinBtn" onClick={() => actions.changeScore(1)} />
   );
 }
 
 function AutoClickers() {
-  const purchasedUpgrades = useCookieStore(s => s.purchasedUpgrades);
+  const purchasedUpgrades = useCoinStore(s => s.purchasedUpgrades);
   console.log(purchasedUpgrades);
   return purchasedUpgrades.map(upgrade => (
     <AutoClicker key={upgrade.id} upgrade={upgrade} />
@@ -72,7 +72,7 @@ function AutoClickers() {
 }
 
 function NewGameButton() {
-  const actions = useCookieStore(s => s.actions);
+  const actions = useCoinStore(s => s.actions);
   return (
     <button onClick={() => actions.newGame()} style={{ marginTop: 50 }}>
       New Game
@@ -84,7 +84,7 @@ function App() {
   return (
     <div className="App">
       <Score />
-      <BigCookieButton />
+      <BigCoinButton />
       <UpgradeList />
       <AutoClickers />
       <NewGameButton />

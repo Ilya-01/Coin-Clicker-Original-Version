@@ -23,7 +23,7 @@ body {
     background-color: #252525;
   }
   
-  .cookieBtn {
+  .coinBtn {
     font-size: 24px;
     width: 200px;
     height: 200px;
@@ -34,10 +34,10 @@ body {
     border: none;
     transition: transform 0.1s;
   }
-  .cookieBtn:active {
+  .coinBtn:active {
     transform: scale(0.95);
   }
-  .cookieBtn:focus {
+  .coinBtn:focus {
     outline: none;
   }
   
