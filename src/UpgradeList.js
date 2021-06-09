@@ -10,7 +10,7 @@ export const UpgradeList = () => {
   
     return (
       <div className="UpgradeList">
-        <h3 className="UpgradesHeader">Upgrades</h3>
+        <h3 className="UpgradesHeader">Auto-Clickers</h3>
         <ul>
           {Object.keys(upgrades)
             .map(key => upgrades[key])

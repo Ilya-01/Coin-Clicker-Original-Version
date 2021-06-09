@@ -6,7 +6,7 @@ const getInitialUpgrades = () => ({
     id: 1,
     cps: 1,
     cost: 10,
-    name: "Auto-clicker"
+    name: "X1"
   },
   2: {
     id: 2,
